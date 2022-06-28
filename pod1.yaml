@@ -1,0 +1,11 @@
+#creating a pod in the declarative form. 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-nginx
+spec:
+  containers:
+    - image: nginx
+      name: cont-nginx
+      ports:
+        - containerPort: 80
