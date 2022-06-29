@@ -1,4 +1,4 @@
-<h1>Hello, everyone!</h1>
+<h1>Hello, everyone!👋</h1>
 
 <h2>This content is part of Professor Macoratti's Kubernetes training on his youtube channel.</h2>
 
