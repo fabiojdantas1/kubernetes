@@ -1,0 +1,17 @@
+#service creates fixed ip and routing between pods
+apiVersion: v1
+kind: Service
+metadata:
+  name: name-service
+  labels:
+    app: my-deploy
+spec:
+  type: ClusterIP #provides services for requests from external customers
+  ports:
+    - port: 8080 #cluster internal port
+      nodePort: 30163 #access the service using that external port
+      targetPort: 80 #port that containers are listening on
+  selector:
+    app: pod-service1 #forwards requests to pods with that label
+#create service via command line
+# kubectl expose deployment my-deploy --name=name-service --type=ClusterIP --port=8080 --targetPort=80
